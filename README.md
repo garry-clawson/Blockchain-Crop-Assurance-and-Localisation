@@ -1,10 +1,6 @@
 # Towards Blockchain Enabled Infield Localisation
 
-
-
-
-
-
+This project is a proof-of-concept infield localisation pipeline using smart contracts deployed on the Ethereum network to notarise, store and retrieve images from the Interplanetary File System (IPFS) that have been correctly aligned to show a localisation match within an infield environment.  
 
 ## Demonstration
 
