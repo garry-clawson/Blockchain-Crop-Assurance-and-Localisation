@@ -35,10 +35,24 @@ Node v16.15.1
 Web3.js v1.5.3
 ```
 
-Truffle comes with a client version of Ganache but get the GUI you should install from the [trufflesuite.com/ganache/] (https://trufflesuite.com/ganache/) website. Then follow the instructions for your own operating system. 
+Truffle comes with a client version of Ganache but get the GUI you should install from the [trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) website. Then follow the instructions for your own operating system. 
 
-### Starting your own project
+### 3. Start your own project
 
+To start your own project, change directory into a project folder (create a new empty folder on your desktop if you have not got one). The open a terminal in that folder and type:
+
+```
+Truffle init
+```
+This will create a new project whihc will will now have 3 x new folders and a js config file. These will be called, 'contracts', 'migrations', 'test' and 'truffle-config.js'. 
+
+The contracts folder will contain the contracts, the migrations folder will contain the deployment files. The tests is a place write to test the logic of the contracts before they go into production.
+
+Before we start the next step is tho amend the truffle-config.js file. Here, we need to uncomment the part of the configuration file (truffle-config.js) where we define the network to be used. Make sure that the below line (around line 45) is uncommented:
+
+```
+host: "127.0.0.1", // Localhost (default: none)
+```
 
 
 
