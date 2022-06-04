@@ -9,15 +9,34 @@ https://user-images.githubusercontent.com/44243266/171829202-f1e23f67-8ac4-48d1-
 ## Installation
 This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several depencies will be required as well as supporting tool chains. These should be widely avaiable for your chosen operating system. 
 
-### Install Node.js
+### 1. Install Node.js
 To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
 
-### Istall Truffle and Genanche
+### 2. Install Truffle and Genanche
 After you have installed Nodejs, type the following command into your terminal:
 
 ```
 npm install truffle -g
 ```
+
+Check that you have correctly installed it by reveiwing the version:
+
+```
+truffle version
+```
+
+You should hopefully see something simular to the below in your terminal:
+
+```
+Truffle v5.5.17 (core: 5.5.17)
+Ganache v^7.1.0
+Solidity - 0.8.14 (solc-js)
+Node v16.15.1
+Web3.js v1.5.3
+```
+
+
+
 
 ## Citation
 
