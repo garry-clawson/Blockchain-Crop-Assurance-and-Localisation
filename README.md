@@ -102,7 +102,7 @@ Now that you have compiled your project you will see one new folder ```build/con
 
 These are the contract artifacts, which hold all the necessary information for deploying and interacting with the contracts.
 
-### Deploy the contract to Ganache
+### 5. Deploy the contract to Ganache
 
 Ganache is a locally hosted blockchain used for development of smart contracts as well as other testing requirements. Here we are safe to deploy and try out all of our contarct requirements safe in the knowledge that we will not be spending any 'actual' funds. Ganache also allows us to connect our projects so that we can see what is happening under the hood in the smart contract, as well as estomate the Gas costs required for ecah stage of deployment and interaction with the smart contract (i.e. writing to it to append the list). 
 
@@ -115,7 +115,7 @@ If everything to plan, we should see that in Ganache that the contract has been 
 
 The contrcat has now been deployed and is ready for us to use as we wish. The next steps will be interacting with the contract by adding an image Base64 string, but first, we need to get our images and complete a sample alignment (using OpenCV), which acts as a key part of the localisation pipeline. 
 
-### Interacting with the smart contract
+### 6. Interacting with the smart contract
 
 The smart contract can be interacted with via the terminal using Truffle commands, however we want to interct with the contract in a more automated way. This allows us to build brauder pipelines and extend the project. To intercat with smart contracts we will use ```web3``` tooling, specifically ```web3.py``` To install tyep the following into your terminal:
 
@@ -125,7 +125,26 @@ pip install web3
 
 Note: You will need to have ```pip``` installed to use pip. For more information about web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
 
-Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it into your main project folder. This program asks for you smart contract address (this can be found on the 'Contrctas' tab next to the ImageStire contract and will add a hard coded value ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9``` to the list within the smart contract. This value is a Base64 
+Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it into your main project folder. This program asks for you smart contract address (this can be found on the 'Contrctas' tab next to the ImageStore contract and will add a hard coded value ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9``` to the list within the smart contract. This is a content identified (CID) and is individual to the image uploaded to IPFS. The act of appending this value to the blockchain is effectivily notorising it. This
+
+To run ```ImageCall.py``` open a terminal and chnage directoy to the project folder and type:
+
+```
+python ImageCall.py```
+
+You will then be asked to enter you Ethereum ImageStore contract address. Once entered you shouold get something simular to the below:
+
+```
+Enter your Etheruem ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
+List size:  2
+List Item:  QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9
+tx_hash: 0x2540e565039b051d5f43ea0cc57cf30ece2d327dab746caf66fb514ef5494a70
+```
+
+We can see form the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is `qmWmXV...` and it has an asscoiated transaction hash of `0x2540e...`. This last value is the associated trasanction in the blockchain and can be seen when inspecting transactions on the Ganacahe GUI. 
+
+If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this run the ImageStore.py program once with lines 39-41 commented out (so it won't call the listsize function). Once run, you can then uncomment back and re-run. Remember, this is just a proof of concept, there are a billion ways to improve this! 
+
 
 
 
