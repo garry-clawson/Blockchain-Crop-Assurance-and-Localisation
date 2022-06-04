@@ -146,7 +146,7 @@ We can see form the above that there are 2 items in the list (the list starts at
 
 If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this run the ImageStore.py program once with lines 39-41 commented out (so it won't call the listsize function). Once run, you can then uncomment back and re-run. Remember, this is just a proof of concept, there are a billion ways to improve this! 
 
-### Aligning an image
+### 7. Aligning an image
 
 The image allignment process was inspired by the pyimagesearch [tutorial](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) for document image alignment and registration. The concept of aligning infield ground stones and using the same type of registration is compelling as low cost method to localise using only a vision system. 
 
