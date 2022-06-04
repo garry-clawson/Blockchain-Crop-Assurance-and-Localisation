@@ -35,7 +35,7 @@ Node v16.15.1
 Web3.js v1.5.3
 ```
 
-Truffle comes with a client version of Ganache but get the GUI you should install from the website [https://trufflesuite.com/ganache/] (https://trufflesuite.com/ganache/). Then follow the instructions for your own operating system. 
+Truffle comes with a client version of Ganache but get the GUI you should install from the [trufflesuite.com/ganache/] (https://trufflesuite.com/ganache/) website. Then follow the instructions for your own operating system. 
 
 ### Starting your own project
 
