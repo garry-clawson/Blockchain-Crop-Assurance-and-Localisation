@@ -54,6 +54,14 @@ Before we start the next step is tho amend the truffle-config.js file. Here, we 
 host: "127.0.0.1", // Localhost (default: none)
 ```
 
+### 4. Compile our smart contract
+
+This is the excting bit! The best place to begin is by cloing this repo and taking the files provided as the project you created in step 3 (assuming it was on a folder on your desktop) will require several of the files in this repo. 
+
+You can do this by either the GitHub desktop tool or by installing Git on your system and typing:
+
+```
+git 
 
 
 
