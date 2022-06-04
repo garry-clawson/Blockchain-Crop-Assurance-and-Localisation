@@ -133,4 +133,4 @@ If you use this project for research, please cite [the paper](https://mycittaion
 
 ## Acknowledgement
 
-The following medium posts [1]{https://medium.com/coinmonks/creating-and-deploying-smart-contracts-using-truffle-and-ganache-ffe927fa70ae}), [2](https://medium.com/thecryptoelement/developing-a-todo-list-dapp-in-ethereum-e4daf8a9ea5c), [3](https://medium.com/swlh/develop-test-and-deploy-your-first-ethereum-smart-contract-with-truffle-14e8956d69fc) and documents were extremely useful when writing up this overview. 
+The following medium posts [1](https://medium.com/coinmonks/creating-and-deploying-smart-contracts-using-truffle-and-ganache-ffe927fa70ae), [2](https://medium.com/thecryptoelement/developing-a-todo-list-dapp-in-ethereum-e4daf8a9ea5c), [3](https://medium.com/swlh/develop-test-and-deploy-your-first-ethereum-smart-contract-with-truffle-14e8956d69fc) and documents were extremely useful when writing up this overview. 
