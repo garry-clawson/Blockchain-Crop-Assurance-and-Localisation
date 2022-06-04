@@ -12,7 +12,7 @@ This installation guide is a quick start to get you onto the right path to build
 ### 1. Install Node.js
 To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
 
-### 2. Install Truffle and Genanche
+### 2. Install Truffle and Gananche
 After you have installed Nodejs, type the following command into your terminal:
 
 ```
@@ -34,6 +34,11 @@ Solidity - 0.8.14 (solc-js)
 Node v16.15.1
 Web3.js v1.5.3
 ```
+
+Truffle comes with a client version of Ganache but get the GUI you should install from the website [https://trufflesuite.com/ganache/] (https://trufflesuite.com/ganache/). Then follow the instructions for your own operating system. 
+
+### Starting your own project
+
 
 
 
