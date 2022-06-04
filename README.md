@@ -141,7 +141,7 @@ List Item:  QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9
 tx_hash: 0x2540e565039b051d5f43ea0cc57cf30ece2d327dab746caf66fb514ef5494a70
 ```
 
-We can see form the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is `qmWmXV...` and it has an asscoiated transaction hash of `0x2540e...`. This last value is the associated trasanction in the blockchain and can be seen when inspecting transactions on the Ganacahe GUI. 
+We can see form the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is ```qmWmXV...``` and it has an asscoiated transaction hash of ```0x2540e...```. This last value is the associated trasanction in the blockchain and can be seen when inspecting transactions on the Ganacahe GUI. 
 
 If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this run the ImageStore.py program once with lines 39-41 commented out (so it won't call the listsize function). Once run, you can then uncomment back and re-run. Remember, this is just a proof of concept, there are a billion ways to improve this! 
 
