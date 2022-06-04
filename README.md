@@ -115,6 +115,18 @@ If everything to plan, we should see that in Ganache that the contract has been 
 
 The contrcat has now been deployed and is ready for us to use as we wish. The next steps will be interacting with the contract by adding an image Base64 string, but first, we need to get our images and complete a sample alignment (using OpenCV), which acts as a key part of the localisation pipeline. 
 
+### Interacting with the smart contract
+
+The smart contract can be interacted with via the terminal using Truffle commands, however we want to interct with the contract in a more automated way. This allows us to build brauder pipelines and extend the project. To intercat with smart contracts we will use ```web3``` tooling, specifically ```web3.py``` To install tyep the following into your terminal:
+
+```
+pip install web3
+```
+
+Note: You will need ot have ```pip``` installed to use pip. For more information abnout web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
+
+
+
 
 
 ## Citation
@@ -131,6 +143,6 @@ If you use this project for research, please cite [the paper](https://mycittaion
 }
 ```
 
-## Acknowledgement
+## Acknowledgements
 
-The following medium posts [[1]](https://medium.com/coinmonks/creating-and-deploying-smart-contracts-using-truffle-and-ganache-ffe927fa70ae), [[2]](https://medium.com/thecryptoelement/developing-a-todo-list-dapp-in-ethereum-e4daf8a9ea5c), [[3]](https://medium.com/swlh/develop-test-and-deploy-your-first-ethereum-smart-contract-with-truffle-14e8956d69fc) and documents [[4]](https://trufflesuite.com/docs/truffle/quickstart/)were extremely useful when writing up this overview. 
+The following medium posts [[1]](https://medium.com/coinmonks/creating-and-deploying-smart-contracts-using-truffle-and-ganache-ffe927fa70ae), [[2]](https://medium.com/thecryptoelement/developing-a-todo-list-dapp-in-ethereum-e4daf8a9ea5c), [[3]](https://medium.com/swlh/develop-test-and-deploy-your-first-ethereum-smart-contract-with-truffle-14e8956d69fc) and documents [[4]](https://trufflesuite.com/docs/truffle/quickstart/) were extremely useful when writing up this overview. 
