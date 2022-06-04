@@ -7,8 +7,16 @@ This project is a proof-of-concept infield localisation pipeline using smart con
 https://user-images.githubusercontent.com/44243266/171829202-f1e23f67-8ac4-48d1-96fa-6f770f302868.mp4
 
 ## Installation
-lorus isum
+This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several depencies will be required as well as supporting tool chains. These should be widely avaiable for your chosen operating system. 
 
+### Install Node.js
+To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
+
+### Istall Truffle and Genanche
+
+'''
+npm install truffle -g
+'''
 
 ## Citation
 
