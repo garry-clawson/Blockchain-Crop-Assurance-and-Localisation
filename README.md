@@ -148,7 +148,7 @@ If there is an error, it is most likely due to the contract having an empty list
 
 ### Aligning an image
 
-The image allignment process was inspired by the pyimagesearch [tutorial](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) for docuemtn image alignment and registration. The concept of aligning ground stones and using the same type of registration is compelling as low cost method to localise using only a vision system. 
+The image allignment process was inspired by the pyimagesearch [tutorial](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) for document image alignment and registration. The concept of aligning infield ground stones and using the same type of registration is compelling as low cost method to localise using only a vision system. 
 
 
 
