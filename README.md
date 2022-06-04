@@ -68,7 +68,7 @@ You will then have all the files needed when copying and pasting across into you
 
 First, take the ```ImageStore.sol``` and place into your ```contracts``` folder. 
 
-Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder.
+Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder. The '2' at the start of the file name indicates that this is the 2nd file to be compiled (this is how the ordering of compilation occurs). 
 
 The ```ImageStore.sol``` file is a Solidity program (Solidity is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
 
@@ -78,8 +78,27 @@ The ```ImageStore.sol``` file is a Solidity program (Solidity is one programming
 
 * ```getListSize``` returns the size of the List. This is used for various items but mainly so we can quickly select the last item in the list for our proof of concept. 
 
+To compile the project type the following in your terminal:
 
+```
+truffle compile
+```
 
+If it has comiled successfully you should have somethign like the below in your terminal:
+
+```
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ImageStore.sol
+> Compiling ./contracts/Migrations.sol
+> Artifacts written to /Users/garryclawson/Desktop/Project/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+```
+
+If you do have any tourble there is plenty of support on the web. One item I found was to comment out line 87 in the ```truffle-config.js``` file so that the default compiler for truffle was being used. 
+
+Now that you have compiled your project you will see one new folder ```build/contracts``` that contains two new files ```ImageStore.json``` and ``` Migrations.json```. 
 
 
 ## Citation
@@ -96,3 +115,4 @@ If you use this project for research, please cite [the paper](https://mycittaion
 }
 ```
 
+## Acknowledgement
