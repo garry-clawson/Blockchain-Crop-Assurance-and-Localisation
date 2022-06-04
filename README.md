@@ -74,7 +74,7 @@ The ```ImageStore.sol``` file is a Solidity program (Solidity is one programming
 
 * ```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new images (in Base64 format) to the contract. 
 
-* ```getListItem()``` returns the Base64 string of an indexed element in the List data structure
+* ```getListItem()``` returns the CID string of an indexed element in the List data structure. The CID is a the retunred value we get when we have uploaded our image to the [Interplantery File System (IPFS)](https://ipfs.io). This is our decentrilised storage that we call on to host our data. 
 
 * ```getListSize``` returns the size of the List. This is used for various items but mainly so we can quickly select the last item in the list for our proof of concept. 
 
@@ -96,13 +96,13 @@ Compiling your contracts...
    - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 ```
 
-If you do have any tourble there is plenty of support on the web. One item I found was to comment out line 87 in the ```truffle-config.js``` file so that the default compiler for truffle was being used. 
+If you do have any tourble there is plenty of support on the web. An item that may cause an isue is stating the defauilt compiler. To remove this issue, comment out line 87 in the ```truffle-config.js``` file so that the default compiler for truffle was being used. 
 
 Now that you have compiled your project you will see one new folder ```build/contracts``` that contains two new files ```ImageStore.json``` and ``` Migrations.json```. 
 
 These are the contract artifacts, which hold all the necessary information for deploying and interacting with the contracts.
 
-### Depoy the contract to Ganache
+### Deploy the contract to Ganache
 
 Ganache is a locally hosted blockchain used for development of smart contracts as well as other testing requirements. Here we are safe to deploy and try out all of our contarct requirements safe in the knowledge that we will not be spending any 'actual' funds. Ganache also allows us to connect our projects so that we can see what is happening under the hood in the smart contract, as well as estomate the Gas costs required for ecah stage of deployment and interaction with the smart contract (i.e. writing to it to append the list). 
 
@@ -123,9 +123,9 @@ The smart contract can be interacted with via the terminal using Truffle command
 pip install web3
 ```
 
-Note: You will need ot have ```pip``` installed to use pip. For more information abnout web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
+Note: You will need to have ```pip``` installed to use pip. For more information about web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
 
-
+Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it into your main project folder. This program asks for you smart contract address (this can be found on the 'Contrctas' tab next to the ImageStire contract and will add a hard coded value ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9``` to the list within the smart contract. This value is a Base64 
 
 
 
