@@ -130,9 +130,10 @@ Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it
 To run ```ImageCall.py``` open a terminal and chnage directoy to the project folder and type:
 
 ```
-python ImageCall.py```
+python ImageCall.py
+```
 
-You will then be asked to enter you Ethereum ImageStore contract address. Once entered you shouold get something simular to the below:
+You will then be asked to enter you Ethereum ImageStore contract address. Once entered you should get something simular to the below:
 
 ```
 Enter your Etheruem ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
