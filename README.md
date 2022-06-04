@@ -70,6 +70,16 @@ First, take the ```ImageStore.sol``` and place into your ```contracts``` folder.
 
 Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder.
 
+The ```ImageStore.sol``` file is a Solidity program (Solidity is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
+
+```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new images (in Base64 format) to the contract. 
+
+```getListItem()``` returns the Base64 string of an indexed element in the List data structure
+
+```getListSize``` returns the size of the List. This is used for various items but mainly so we can quickly select the last item in the list for our proof of concept. 
+
+
+
 
 
 ## Citation
