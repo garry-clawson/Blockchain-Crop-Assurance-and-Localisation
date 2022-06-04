@@ -61,7 +61,14 @@ This is the excting bit! The best place to begin is by cloing this repo and taki
 You can do this by either the GitHub desktop tool or by installing Git on your system and typing:
 
 ```
-git 
+git clone https://github.com/garry-clawson/Towards-Blockchain-Enabled-Infield-Localisation.git
+```
+
+You will then have all the files needed when copying and pasting across into your project folder. 
+
+First, take the ```ImageStore.sol``` and place into your ```contracts``` folder. 
+
+Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder.
 
 
 
