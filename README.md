@@ -138,7 +138,7 @@ Note: You will need to have ```pip``` installed to use pip. For more information
 
 Now that web3 is installed. We can copy then ```retrieve_image_cid.py``` and ```add_image_cid.py``` and paste these files into your ```project > smart_contract``` project folder. 
 
-The ```retrieve_image_cid.py`` script asks for you smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract and and also a CID (such as ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9```) to append the list within the smart contract. This content identified (CID) and is specific to the image uploaded to IPFS. The act of appending this value to the blockchain is effectively notorising it.
+The ```retrieve_image_cid.py``` script asks for you smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract and and also a CID (such as ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9```) to append the list within the smart contract. This content identified (CID) and is specific to the image uploaded to IPFS. The act of appending this value to the blockchain is effectively notorising it.
 
 #### Add an image CID to the smart contract
 
