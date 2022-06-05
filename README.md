@@ -1,6 +1,6 @@
 # Towards Blockchain Enabled Infield Localisation
 
-This project is a proof-of-concept infield localisation pipeline using smart contracts deployed on the Ethereum network to notarise, store and retrieve images from the Interplanetary File System (IPFS) that have been correctly aligned to show a localisation match within an infield environment. Localisation is achieved by using ground stones adjacent to planted seeds to enable sub GNSS accuracy without expensive hardware requirements such as RTK-GNSS. This offers a novel way for low ground coverage crops such as onion or asparagus to  be re-identified to provide potential for improved supply chain assurance.  
+This project is a proof-of-concept infield localisation pipeline using smart contracts deployed on the Ethereum network to notarise, store and retrieve images from the Interplanetary File System (IPFS) that have been correctly aligned to show a localisation match within an infield environment. Localisation is achieved by using images of ground stones taken adjacent to planted seeds to enable sub GNSS accuracy without expensive hardware requirements such as RTK-GNSS. This offers a novel way for low ground coverage crops such as onion or asparagus to be re-identified to provide potential for improved supply chain assurance.  
 
 ## Demonstration
 
@@ -125,26 +125,50 @@ pip install web3
 
 Note: You will need to have ```pip``` installed to use pip. For more information about web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
 
-Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it into your main project folder. This program asks for you smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract and will add a CID such as ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9``` to the list within the smart contract. This is a content identified (CID) and is individual to the image uploaded to IPFS. The act of appending this value to the blockchain is effectivily notorising it.
+Now that web3 is installed. We can copy then ```retrieve_image_cid.py``` and ```add_image_cid.py``` and paste these files into your ```project > smart_contract``` project folder. 
 
-To run ```ImageCall.py``` open a terminal and change directory to the project folder and type:
+The ```retrieve_image_cid.py`` script asks for you smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract and and also a CID (such as ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9```) to append the list within the smart contract. This content identified (CID) and is specific to the image uploaded to IPFS. The act of appending this value to the blockchain is effectivily notorising it.
+
+#### Add an image CID to the smart contract
+
+To run ```add_image_cid.py``` open a terminal and change directory to the project folder and type:
 
 ```
-python ImageCall.py
+python add_image_cid.py
 ```
 
-You will then be asked to enter you Ethereum ImageStore contract address. Once entered you should get something simular to the below:
+You will then be asked to enter you Ethereum ImageStore contract address and CID. Once entered this information you should get something simular to the below:
 
 ```
 Enter your Etheruem ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
 List size:  2
-List Item:  QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9
-tx_hash: 0x2540e565039b051d5f43ea0cc57cf30ece2d327dab746caf66fb514ef5494a70
+CID added:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
+tx_hash: 0x9585e039227b6cb19e1492fe61a6dbe601a033e1cb2d36f014aa091526623392
 ```
 
-We can see form the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is ```qmWmXV...``` and it has an asscoiated transaction hash of ```0x2540e...```. This last value is the associated trasanction in the blockchain and can be seen when inspecting transactions on the Ganacahe GUI. 
+We can see from the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is ```QmcBRb...``` and it has an asscoiated transaction hash of ```0x9585e0...```. This last value is the associated trasanction in the blockchain and can be seen when inspecting transactions on the Ganacahe GUI. 
 
-If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this run the ImageStore.py program once with lines 39-41 commented out (so it won't call the listsize function). Once run, you can then uncomment back and re-run. Remember, this is just a proof of concept, there are a billion ways to improve this! 
+If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this make sure you first add a CID to the smart contract first by following the pipeline process outlined in 'Putting it all togther'. 
+
+#### Retrieve an image CID from the smart contract
+
+To run ```retrieve_image_cid.py``` open a terminal and change directory to the project folder and type:
+
+```
+python retrieve_image_cid.py
+```
+
+You will then be asked to enter you Ethereum ImageStore contract address and the position of the CID in the list. Once entered this information you should get something simular to the below:
+
+```
+Enter your Etheruem ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
+List size:  2
+CID:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
+```
+
+For this proof-of-concept no optimsation has been completed. We are currently using a very simple list strcuture. In Solidity there is no simple way to search a list for as ecah step will incur a Gas cost. Other data structures will offer a better way to do this. 
+
+
 
 ### 7. Aligning an image
 
