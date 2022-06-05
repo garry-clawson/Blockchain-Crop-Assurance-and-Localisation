@@ -59,11 +59,6 @@ cv2.imshow("Image Alignment Overlay", output)
 
 print("Success ...")
 
-# Convert image ot base64 which will be kept in IPFS
-#with open("ipfs_test_image.jpeg", "rb") as img_file:
-b64_string = base64.b64encode(image.read())
-#print(b64_string)
-
 end = time.time()
 print("Time to align Image: ", end - start)
 
