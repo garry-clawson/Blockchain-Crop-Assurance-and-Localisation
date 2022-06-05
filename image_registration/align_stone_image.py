@@ -4,8 +4,9 @@
 
 # =====================================================
 
-# USAGE
-# python3 align_stone_image.py --template images/template_ground_stone_plan_view.jpeg --image images/template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg
+# Usage examples
+# 1. python3 align_stone_image.py --template images/template_ground_stone_plan_view.jpeg --image images/template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg
+# 2. python3 align_stone_image.py --template images/additional_images/template_image_1.jpeg --image images/additional_images/current_image_1.jpeg
 
 # import the necessary packages
 from alignment import align_images
