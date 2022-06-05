@@ -79,13 +79,13 @@ First, take the ```ImageStore.sol``` and place into your ```contracts``` folder.
 
 Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder. The '2' at the start of the file name indicates that this is the 2nd file to be compiled (this is how Truffle knows the ordering of compilation). 
 
-The ```ImageStore.sol``` file is a Solidity program (Solidity is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
+The ```ImageStore.sol``` file is a Solidity program ([Solidity](https://docs.soliditylang.org/en/v0.8.14/) is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
 
 * ```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new images content identifiers (CID) to the contract. 
 
 * ```getListItem()``` returns the CID string of an indexed element in the List data structure. The CID is a the returned value we get when we have uploaded our image to the [Interplanetary File System (IPFS)](https://ipfs.io). This is our decentralized storage that we call on to host our data. 
 
-* ```getListSize``` returns the size of the List. This is used for various items but mainly so we can quickly select the last item in the list for our proof of concept. 
+* ```getListSize``` returns the size of the List. This is mainly used to see how many CIDs we have stored in our contract. 
 
 To compile the project type the following in your terminal:
 
@@ -107,9 +107,9 @@ Compiling your contracts...
 
 If you do have any trouble there is plenty of support on the web. An item that may cause an issue is stating the default compiler. To remove this issue, comment out line 87 in the ```truffle-config.js``` file so that the default compiler for truffle was being used. 
 
-Now that you have compiled your project you will see one new folder ```build/contracts``` that contains two new files ```ImageStore.json``` and ``` Migrations.json```. 
+Now that you have compiled your project you will see one new folder ```build/contracts``` that contains two new files ```ImageStore.json``` and also ```Migrations.json```. 
 
-These are the contract artifacts, which hold all the necessary information for deploying and interacting with the contracts.
+These are for the contract artifacts, which hold all the necessary information for deploying and interacting with the contracts.
 
 ### 5. Deploy the contract to Ganache
 
