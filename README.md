@@ -44,14 +44,14 @@ Node v16.15.1
 Web3.js v1.5.3
 ```
 
-Truffle comes with a client version of Ganache but get the GUI you should install from the [trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) website. Then follow the instructions for your own operating system. 
+Truffle comes with a client version of Ganache but you should ideally get the GUI. You should install this from the [trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) website. Then follow the instructions for your own operating system. 
 
 ### 3. Start your own project
 
 To start your own project, change directory into a project folder (create a new empty folder on your desktop if you have not got one). The open a terminal in that folder and type:
 
 ```
-Truffle init
+truffle init
 ```
 This will create a new project which will will now have 3 x new folders and a js config file. These will be called, 'contracts', 'migrations', 'test' and 'truffle-config.js'. 
 
