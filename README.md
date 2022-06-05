@@ -63,7 +63,7 @@ Before we start the next step is tho amend the truffle-config.js file. Here, we 
 host: "127.0.0.1", // Localhost (default: none)
 ```
 
-### 4. Compile our smart contract
+### 4. Compile the smart contract
 
 This is the exciting bit! The best place to begin is by cloning this repo and taking the files provided as the project you created in step 3 (assuming it was on a folder on your desktop) will require several of the files in this repo. 
 
@@ -176,7 +176,6 @@ CID:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
 ```
 
 For this proof-of-concept no optimization has been completed. We are currently using a very simple list strcuture. In Solidity there is no simple way to search a list for as each step will incur a Gas cost. Other data structures will offer a better way to do this. 
-
 
 
 ### 7. Aligning an image
