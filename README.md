@@ -192,9 +192,23 @@ The installation section above decsribes how to get all the peices of the pipeli
 3. Add the CID of template image to the list in the smart contract (step 6)
 
 #### Execute the pipeline
-4. Recall the CID of the template image from the smart contract (step 6)
-5. 
+4. Take a current image (to align to the template image)
+5. Recall the CID of the template image from the smart contract (step 6)
+6. Download the template image from IPFS (step 9)
+7. Align the current image with the template image (step 7)
+8. If all goes well and alignment is succesful, upload the current image to IPFS (step 8)
+9. Repeat the process
 
+## Suggested Improvements
+
+Multiple improvements can be made to this pripeline in the underlying scripts and smart contracts to make the system automated. S few ideas are below:
+
+* Improve the alignment process on ground stones - this is currently very simple and enhanced feature detection and segmentation would improve the accuracy (note, we are not looking to see if the images are the same, just if they can be aligned to a high accuracy)
+* Build in an accuracy model to provide a Yes/No result for image alignment
+* Identify a better way to take images to achieve an improved aligment accuracy (currently, this is a static camera on the fornt of the open hardware robot). 
+* Use GNSS to identify what template image is required and call it from IPFS (this will need an interaction with the smart contract to get the relevent CID)
+* Create a better way to get a relevent CID from the list in the smart contract
+* Automate the pipeline so that once a current image is taken it will automatically feedthorugh the alignment, storage and smart contract process
 
 
 
