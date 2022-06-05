@@ -1,7 +1,5 @@
 # =========== Credit to pyimagesearch ============
-
 # https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/
-
 # =====================================================
 
 # Usage examples
