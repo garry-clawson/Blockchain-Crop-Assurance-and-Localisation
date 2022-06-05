@@ -197,7 +197,7 @@ The installation section above decsribes how to get all the peices of the pipeli
 6. Download the template image from IPFS (step 9)
 7. Align the current image with the template image (step 7)
 8. If all goes well and alignment is succesful, upload the current image to IPFS (step 8)
-9. Repeat the process
+9. Repeat the process form stage 4-8 (Note: to do this you will need a collection of template images)
 
 ## Suggested Improvements
 
@@ -209,11 +209,6 @@ Multiple improvements can be made to this pripeline in the underlying scripts an
 * Use GNSS to identify what template image is required and call it from IPFS (this will need an interaction with the smart contract to get the relevent CID)
 * Create a better way to get a relevent CID from the list in the smart contract
 * Automate the pipeline so that once a current image is taken it will automatically feedthorugh the alignment, storage and smart contract process
-
-
-
-
-
 
 ## Citation
 
