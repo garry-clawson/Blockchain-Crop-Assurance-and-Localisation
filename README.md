@@ -4,7 +4,7 @@ This project is a proof-of-concept infield localisation pipeline using smart con
 
 ## Demonstration
 
-https://user-images.githubusercontent.com/44243266/171829202-f1e23f67-8ac4-48d1-96fa-6f770f302868.mp4
+
 
 ## Installation
 This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several decencies will be required as well as supporting tool chains. These should be widely available for your chosen operating system. 
