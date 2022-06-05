@@ -231,7 +231,7 @@ The installation section above describes how to get all the pieces of the pipeli
 6. Download the template image from IPFS (step 9)
 7. Align the current image with the template image (step 7)
 8. If all goes well and alignment is successful, upload the current image to IPFS (step 8)
-9. Repeat the process from stage 4-8 (Note: to do this you will need a collection of template images)
+9. Repeat the process from stage 4-8 *(Note: to do this you will need a collection of template images)*
 
 ## Suggested Improvements
 
