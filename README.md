@@ -235,7 +235,7 @@ The installation section above describes how to get all the pieces of the pipeli
 
 ## Suggested Improvements
 
-Multiple improvements can be made to this pipeline in the underlying scripts and smart contracts to make the system automated. S few ideas are below:
+Multiple improvements can be made to this pipeline in the underlying scripts and the smart contracts to make the system automated. A few ideas are below:
 
 * Improve the alignment process on ground stones - this is currently very simple and enhanced feature detection and segmentation would improve the accuracy (note, we are not looking to see if the images are the same, just if they can be aligned to a high accuracy)
 * Build in an accuracy model to provide a Yes/No result for image alignment
