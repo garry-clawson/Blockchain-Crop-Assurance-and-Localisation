@@ -186,13 +186,16 @@ python3 ipfs_download.py
 
 The installation section above decsribes how to get all the peices of the pipeline. However, they are in a natural order for understanding the system and getting it working but not for operating the pipeline. This section will describe what part to run in what order to see a succesful piupeline flow. This order is as follows:
 
+#### Prepare the pipeline
 1. Create your smart contract (steps 1-5)
 2. Upload a template image to IPFS get returned CID (step 8)
-3. Add CID to smart contract list (step 6)
+3. Add CID of template image to the list in the smart contract (step 6)
+
+#### Execute the pipeline
 4. 
 
 
-```template image to IPFS > current image > alignmened image > upload to IPFS and get CID > push CID to
+
 
 
 
