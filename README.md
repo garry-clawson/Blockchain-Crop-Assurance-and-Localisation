@@ -194,7 +194,7 @@ Here, we are taking a template image ```template_ground_stone_plan_view.jpeg``` 
 
 If the image is successfully able to be aligned then a ```Success...``` message will be shown. The newly current taken image is heavily rotated and banked to show the full alignment process. In practice, as the robot moves up and down a row it a newly taken image will be very similar (i.e. directly overhead) to the template image taken during seeding. 
 
-Since this image (given as an example) is successful, we shall now upload it to IPFS. 
+Since this image (given as an example) is successful, we shall now upload it to IPFS. Further images to test alignment are available in the `image_registration > images > additionla_images``` folder. 
 
 ### 8. Upload image to IPFS
 
