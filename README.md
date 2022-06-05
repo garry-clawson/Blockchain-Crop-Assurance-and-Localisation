@@ -1,6 +1,6 @@
 # Blockchain Crop Assurance and Localisation
 
-This project is a proof-of-concept infield localisation pipeline using smart contracts deployed on the Ethereum network to notarise, store and retrieve images from the Interplanetary File System (IPFS) that have been succesfully aligned to show a localisation match within an infield environment. Localisation is achieved by using images of ground stones taken adjacent to planted seeds to enable sub GNSS accuracy without expensive hardware requirements such as RTK-GNSS. This offers a novel way for low ground coverage crops such as onion or asparagus to be re-identified to provide potential for improved supply chain assurance.  
+This project is a proof-of-concept infield localisation pipeline using smart contracts deployed on the Ethereum network to notarise, store and retrieve images from the Interplanetary File System (IPFS) that have been successfully aligned to show a localisation match within an infield environment. Localisation is achieved by using images of ground stones taken adjacent to planted seeds to enable sub GNSS accuracy without expensive hardware requirements such as RTK-GNSS. This offers a novel way for low ground coverage crops such as onion or asparagus to be re-identified to provide potential for improved supply chain assurance.  
 
 ## Table of Contents
 * [Demonstration Video](#demonstration)
@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/44243266/172064632-ac9f9f0a-d460-4c8c-
 ## How to Install and Run the Project
 This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several decencies will be required as well as supporting tool chains. These should be widely available for your chosen operating system. 
 
-With the guide below you should be able to get the pipepine working, experience smart contracts for yourself as well as run your own blockchain (and see it operate in real time), even with limited experience. If you see any errors they are my own. Please feel free to make a pull request to improve this document. 
+With the guide below you should be able to get the pipeline working, experience smart contracts for yourself as well as run your own blockchain (and see it operate in real time), even with limited experience. If you see any errors they are my own. Please feel free to make a pull request to improve this document. 
 
 ### 1. Install Node.js
 To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
@@ -157,7 +157,7 @@ CID added:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
 tx_hash: 0x9585e039227b6cb19e1492fe61a6dbe601a033e1cb2d36f014aa091526623392
 ```
 
-We can see from the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is ```QmcBRb...``` and it has an associated transaction hash of ```0x9585e0...```. This last value is the associated transaction in the blockchain and can be seen when inspecting transactions on the Ganacahe GUI. 
+We can see from the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is ```QmcBRb...``` and it has an associated transaction hash of ```0x9585e0...```. This last value is the associated transaction in the blockchain and can be seen when inspecting transactions on the Ganache GUI. 
 
 If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this make sure you first add a CID to the smart contract first by following the pipeline process outlined in 'Putting it all together'. 
 
@@ -169,7 +169,7 @@ To run ```retrieve_image_cid.py``` open a terminal and change directory to the p
 python retrieve_image_cid.py
 ```
 
-You will then be asked to enter you Ethereum ImageStore contract address and the position of the CID in the list. Once entered this information you should get something simular to the below:
+You will then be asked to enter you Ethereum ImageStore contract address and the position of the CID in the list. Once entered this information you should get something similar to the below:
 
 ```
 Enter your Ethereum ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
@@ -177,7 +177,7 @@ List size:  2
 CID:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
 ```
 
-For this proof-of-concept no optimization has been completed. We are currently using a very simple list strcuture. In Solidity there is no simple way to search a list for as each step will incur a Gas cost. Other data structures will offer a better way to do this. 
+For this proof-of-concept no optimization has been completed. We are currently using a very simple list structure. In Solidity there is no simple way to search a list for as each step will incur a Gas cost. Other data structures will offer a better way to do this. 
 
 
 ### 7. Aligning an image
