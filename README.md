@@ -189,10 +189,11 @@ The installation section above decsribes how to get all the peices of the pipeli
 #### Prepare the pipeline
 1. Create your smart contract (steps 1-5)
 2. Upload a template image to IPFS get returned CID (step 8)
-3. Add CID of template image to the list in the smart contract (step 6)
+3. Add the CID of template image to the list in the smart contract (step 6)
 
 #### Execute the pipeline
-4. 
+4. Recall the CID of the template image from the smart contract (step 6)
+5. 
 
 
 
