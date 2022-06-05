@@ -150,6 +150,14 @@ If there is an error, it is most likely due to the contract having an empty list
 
 The image allignment process was inspired by the pyimagesearch [tutorial](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) for document image alignment and registration. The concept of aligning infield ground stones and using the same type of registration is compelling as low cost method to localise using only a vision system. 
 
+To align an image the ``` align_stone_image.py``` script is called. To call this script the following usage is required:
+
+```
+python3 align_stone_image.py --template images/template_ground_stone_plan_view.jpeg --image images/template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg
+```
+
+Here, we are taking a temaplte image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a dircet plan view adjacent to the planting site), and comparing it to a newly taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
+
 
 
 
