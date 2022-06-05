@@ -4,15 +4,17 @@ This project is a proof-of-concept infield localisation pipeline using smart con
 
 ### Table of Contents
 * [Demonstration Video](#demonstration)
-* [Installation](#installation)
-* [Install Node.js](#1. Install Node.js)
+* [How to Install and Run the Project](#How to Install and Run the Project)
+* [How to Use the Project](#How to Use the Project)
+* [Suggested Improvements](#Suggested Improvements)
+* [Acknowledgements](#acknowledgements)
 
 
 ## Demonstration
 
 https://user-images.githubusercontent.com/44243266/172064632-ac9f9f0a-d460-4c8c-9944-084043ed0105.mp4
 
-## Installation
+## How to Install and Run the Project
 This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several decencies will be required as well as supporting tool chains. These should be widely available for your chosen operating system. 
 
 ### 1. Install Node.js
@@ -212,7 +214,7 @@ Downloading an image from IPFS is almost exactly the same as uploading, except t
 python3 ipfs_download.py
 ```
 
-## Putting it all together
+## How to Use the Project
 
 The installation section above describes how to get all the pieces of the pipeline. However, they are in a natural order for understanding the system and getting it working but not for operating the pipeline. This section will describe what part to run in what order to see a successful pipeline flow. This order is as follows:
 
@@ -244,3 +246,7 @@ Multiple improvements can be made to this pipeline in the underlying scripts and
 ## Acknowledgements
 
 The following medium posts [[1]](https://medium.com/coinmonks/creating-and-deploying-smart-contracts-using-truffle-and-ganache-ffe927fa70ae), [[2]](https://medium.com/thecryptoelement/developing-a-todo-list-dapp-in-ethereum-e4daf8a9ea5c), [[3]](https://medium.com/swlh/develop-test-and-deploy-your-first-ethereum-smart-contract-with-truffle-14e8956d69fc) and documents [[4]](https://trufflesuite.com/docs/truffle/quickstart/) were extremely useful when writing up this overview. Additionally, online resources [[5]](https://trufflesuite.com/docs/truffle/quickstart/), [[6]](https://nodejs.org/en/), [[7]](https://trufflesuite.com/ganache/), [[8]](https://www.dappuniversity.com/articles/web3-py-intro), [[9]](https://opencv.org)  and [[10]](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) were extremely useful for putting the project together.
+
+## Licence
+
+This project is licensed under the [GNU General Public License v3.0](LICENCE)
