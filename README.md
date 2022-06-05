@@ -156,7 +156,13 @@ To align an image the ``` align_stone_image.py``` script is called. To call this
 python3 align_stone_image.py --template images/template_ground_stone_plan_view.jpeg --image images/template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg
 ```
 
-Here, we are taking a temaplte image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a dircet plan view adjacent to the planting site), and comparing it to a newly taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
+Here, we are taking a temaplte image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a dircet plan view adjacent to the planting site), and comparing it to a newly current taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
+
+If the image is succesfully able to be aligned then a ```Sucess...``` message will be shown. The newly current taken image is heavily rotated and banked to show the full alignment process. In practice, as the robot moves up and down a row it a newly taklen image will be very simular (i.e. directly overhead) to the template image taken during seeding. 
+
+Since this image (given as an example) is succesful, we shall now convert it to Base64 to then upload to IPFS. 
+
+### 8. Convert successfully aligned image to Base64
 
 
 
