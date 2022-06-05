@@ -4,10 +4,11 @@ This project is a proof-of-concept infield localisation pipeline using smart con
 
 ### Table of Contents
 * [Demonstration Video](#demonstration)
-* [How to Install and Run the Project](#How to Install and Run the Project)
-* [How to Use the Project](#How to Use the Project)
-* [Suggested Improvements](#Suggested Improvements)
+* [How to Install and Run the Project](#how to install and run the project)
+* [How to Use the Project](#how to use the project)
+* [Suggested Improvements](#suggested improvements)
 * [Acknowledgements](#acknowledgements)
+* [Licence](#licence)
 
 
 ## Demonstration
