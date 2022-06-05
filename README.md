@@ -22,7 +22,7 @@ This installation guide is a quick start to get you onto the right path to build
 To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
 
 ### 2. Install Truffle and Gananche
-After you have installed Nodejs, type the following command into your terminal:
+After you have installed Node.js, type the following command into your terminal to install Truffle:
 
 ```
 npm install truffle -g
