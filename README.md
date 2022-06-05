@@ -113,7 +113,7 @@ These are the contract artifacts, which hold all the necessary information for d
 
 ### 5. Deploy the contract to Ganache
 
-Ganache is a locally hosted blockchain used for development of smart contracts as well as other testing requirements. Here we are safe to deploy and try out all of our contract requirements safe in the knowledge that we will not be spending any 'actual' funds. Ganache also allows us to connect our projects so that we can see what is happening under the hood in the smart contract, as well as estimate the Gas costs required for each stage of deployment and interaction with the smart contract (i.e. writing to it to append the list). 
+[Ganache](https://trufflesuite.com/ganache/) is a locally hosted blockchain used for development of smart contracts as well as other testing requirements. Here we are safe to deploy and try out all of our contract requirements safe in the knowledge that we will not be spending any 'actual' funds. Ganache also allows us to connect our projects so that we can see what is happening under the hood in the smart contract, as well as estimate the Gas costs required for each stage of deployment and interaction with the smart contract (i.e. writing to it to append the list). 
 
 To deploy the contract to Ganache, type the following:
 
