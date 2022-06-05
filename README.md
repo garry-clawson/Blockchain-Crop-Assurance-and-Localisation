@@ -125,9 +125,9 @@ pip install web3
 
 Note: You will need to have ```pip``` installed to use pip. For more information about web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
 
-Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it into your main project folder. This program asks for you smart contract address (this can be found on the 'Contrctas' tab next to the ImageStore contract and will add a hard coded value ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9``` to the list within the smart contract. This is a content identified (CID) and is individual to the image uploaded to IPFS. The act of appending this value to the blockchain is effectivily notorising it. This
+Now that web3 is installed. We can copy the ```ImageCall.py``` file and paste it into your main project folder. This program asks for you smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract and will add a CID such as ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9``` to the list within the smart contract. This is a content identified (CID) and is individual to the image uploaded to IPFS. The act of appending this value to the blockchain is effectivily notorising it.
 
-To run ```ImageCall.py``` open a terminal and chnage directoy to the project folder and type:
+To run ```ImageCall.py``` open a terminal and change directory to the project folder and type:
 
 ```
 python ImageCall.py
@@ -176,7 +176,23 @@ You should then get returned a CID as described above.
 
 ### 9. Download an image from IPFS
 
-Downloading an image from IPFS is almost exactly the same as uploading, except that we are getting rather than adding. We use the same Infura API for access and take a content identifier (CID) as seen in step 8 to find the requested file. 
+Downloading an image from IPFS is almost exactly the same as uploading, except that we are getting rather than adding. We use the same Infura API for access and take a content identifier (CID) as seen in step 8 to find the requested file. Since we are using an example image and will be writing this to the same folder as the ```template_ground_stone_plan_view.jpeg```, we will call this returned image ```returned_template_ground_stone_plan_view.jpeg```. Line 27 declares in the get_image() function states where this image should be written to. To download an image type the following into your terminal:
+
+```
+python3 ipfs_download.py
+```
+
+## Putting it all togther
+
+The installation section above decsribes how to get all the peices of the pipeline. However, they are in a natural order for understanding the system and getting it working but not for operating the pipeline. This section will describe what part to run in what order to see a succesful piupeline flow. This order is as follows:
+
+1. Create your smart contract (steps 1-5)
+2. Upload a template image to IPFS get returned CID (step 8)
+3. Add CID to smart contract list (step 6)
+4. 
+
+
+```template image to IPFS > current image > alignmened image > upload to IPFS and get CID > push CID to
 
 
 
