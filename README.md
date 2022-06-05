@@ -160,10 +160,13 @@ Here, we are taking a temaplte image ```template_ground_stone_plan_view.jpeg``` 
 
 If the image is succesfully able to be aligned then a ```Sucess...``` message will be shown. The newly current taken image is heavily rotated and banked to show the full alignment process. In practice, as the robot moves up and down a row it a newly taklen image will be very simular (i.e. directly overhead) to the template image taken during seeding. 
 
-Since this image (given as an example) is succesful, we shall now convert it to Base64 to then upload to IPFS. 
+Since this image (given as an example) is succesful, we shall now upload it to IPFS. 
 
-### 8. Convert successfully aligned image to Base64
+### 8. Upload image to IPFS
 
+The IPFS is accessible via an Infura API endpoint. When ever a user uploads text, files, images etc to IPFS a content identifier (CID) is returned. This looks simular to ```QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62```. This CID is what is uploaded to the smart contract described in Step 6. 
+
+The ```ipfs_upload.py``` file is used to upload an image to IPFS. This takes an image (currently the ```template_ground_stone_plan_view.jpeg``` image used as an example, but this should be your successfully aligned image). 
 
 
 
