@@ -226,7 +226,7 @@ The installation section above describes how to get all the pieces of the pipeli
 3. Add the CID of template image to the list in the smart contract (step 6)
 
 #### Execute the pipeline
-4. Take a current image (to align to the template image)
+4. Take a current image and save to images directory (this will be compared - aligned - to the template image)
 5. Recall the CID of the template image from the smart contract (step 6)
 6. Download the template image from IPFS (step 9)
 7. Align the current image with the template image (step 7)
