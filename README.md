@@ -192,7 +192,7 @@ python3 align_stone_image.py --template images/template_ground_stone_plan_view.j
 
 Here, we are taking a template image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a direct plan view adjacent to the planting site), and comparing it to a newly current taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
 
-To play around with this using any images the usage is below:
+To play around with image alignment and registration using some more images the usage is below:
 
 ```
 python3 align_stone_image.py --template path/to/your/template/image --image path/to/your/current/image
