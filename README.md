@@ -83,7 +83,7 @@ This will clone the folder to your desired location. You will then have all the 
 
 The ```ImageStore.sol``` file is a Solidity program ([Solidity](https://docs.soliditylang.org/en/v0.8.14/) is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
 
-* ```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new content identifiers (CID) to the contract. The CID is a the returned value we get when we have uploaded our image to the [Interplanetary File System (IPFS)](https://ipfs.io). This is our decentralized storage that we call on to host our data. 
+* ```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new content identifiers (CID) to the contract. The CID is the returned value we get when we have uploaded our image to the [Interplanetary File System (IPFS)](https://ipfs.io). This is our decentralized storage that we call on to host our data. The CID allows us to later retrieve our data (our image) from IPFS. 
 
 * ```getListItem()``` returns the CID string of an indexed element from the List data structure. 
 
@@ -107,24 +107,24 @@ Compiling your contracts...
    - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 ```
 
-If you do have any trouble there is plenty of support on the web. An item that may cause an issue is stating the default compiler. To remove this issue, comment out line 87 in the ```truffle-config.js``` file so that the default compiler for truffle was being used. 
+If you do have any trouble there is plenty of support on the web. An item that may cause an issue is defining the default compiler in the ```truffle-config.js``` file. If you do have this issue, comment out line 87 in the ```truffle-config.js``` file so that the default compiler for truffle will be used. 
 
 Now that you have compiled your project you will see one new folder ```build/contracts``` that contains two new files ```ImageStore.json``` and also ```Migrations.json```. 
 
-These are for the contract artifacts, which hold all the necessary information for deploying and interacting with the contracts.
+These are for the contract artifacts, which hold all the necessary information for deploying and interacting with the smart contracts.
 
 ### 5. Deploy the contract to Ganache
 
-[Ganache](https://trufflesuite.com/ganache/) is a locally hosted blockchain used for development of smart contracts as well as other testing requirements. Here we are safe to deploy and try out all of our contract requirements safe in the knowledge that we will not be spending any 'actual' funds. Ganache also allows us to connect our projects so that we can see what is happening under the hood in the smart contract, as well as estimate the Gas costs required for each stage of deployment and interaction with the smart contract (i.e. writing to it to append the list). 
+[Ganache](https://trufflesuite.com/ganache/) is a locally hosted blockchain used for development of smart contracts as well as other testing requirements. Here we are safe to deploy and try out all of our contract calls in a safe way, safe in the knowledge that we will not be spending any 'actual' funds (i.e. Gas > Eth). Ganache also allows us to connect our projects so that we can see what is happening under the hood in the smart contract, as well as estimate the Gas costs required for each stage of deployment and costs for interaction with the smart contract (i.e. writing to it to append the list). 
 
-To deploy the contract to Ganache, type the following:
+To deploy (called migrate) the contract to Ganache, type the following:
 
 ```
 truffle migrate
 ```
-If everything to plan, we should see that in Ganache that the contract has been sent to the blockchain and current block height has incremented. To see the actual contract state you will need to add a workspace to the Ganache GUI. The 'Contracts' tab on the GUI will take you through how to do this (2 very simple steps that takes less than 10 seconds). 
+If everything went to plan, we should see that in Ganache the contract has been sent to the blockchain and current block height has incremented. To see the actual contract state you will need to add a workspace to the Ganache GUI. The 'Contracts' tab on the GUI will take you through how to do this (2 very simple steps that takes less than 10 seconds and just requires linking the ```truffle-config.js``` file). 
 
-The contract has now been deployed and is ready for us to use as we wish. The next steps will be interacting with the contract by adding an image Base64 string, but first, we need to get our images and complete a sample alignment (using OpenCV), which acts as a key part of the localisation pipeline. 
+The contract has now been deployed and is ready for us to use and interact with as we wish. The next steps will be interacting with the contract by adding the IPFS CIDs (from our uploaded images).
 
 ### 6. Interacting with the smart contract
 
