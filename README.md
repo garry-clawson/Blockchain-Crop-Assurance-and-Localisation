@@ -230,16 +230,17 @@ The installation section above describes how to get all the pieces of the pipeli
 
 #### Prepare the pipeline
 1. Create your smart contract (steps 1-5)
-2. Upload a template image to IPFS get returned CID (step 8)
+2. Upload a template image to IPFS and get a returned CID (step 8)
 3. Add the CID of template image to the list in the smart contract (step 6)
+4. Repeat process 2-3 for all of the template images (i.e. for all images taken adjacent to a planted seed)
 
 #### Execute the pipeline
-4. Take a current image and save to images directory (this will be compared - aligned - to the template image)
-5. Recall the CID of the template image from the smart contract (step 6)
-6. Download the template image from IPFS (step 9)
-7. Align the current image with the template image (step 7)
-8. If all goes well and alignment is successful, upload the current image to IPFS (step 8)
-9. Repeat the process from stage 4-8 *(Note: to do this you will need a collection of template images)*
+5. Take a current image and save to images directory (this will be compared - aligned - to the template image)
+6. Recall the CID of the template image from the smart contract (step 6)
+7. Download the template image from IPFS using the recalled CID (step 9)
+8. Align the current image with the template image (step 7)
+9. If all goes well and alignment is successful, upload the current image to IPFS (step 8)
+10. Repeat the process from stage 5-9 *(Note: to do this you will need a collection of template images)*
 
 ## Suggested Improvements
 
@@ -250,8 +251,8 @@ Multiple improvements can be made to this pipeline in the underlying scripts and
 * Identify a better way to take images to achieve an improved alignment accuracy (currently, this is a static camera on the front of the open hardware robot). 
 * Use GNSS to identify what template image is required and call it from IPFS (this will need an interaction with the smart contract to get the relevant CID)
 * Create a better way to get a relevant CID from the list in the smart contract
+* A method to automatically upload a CID to the smart contract once it has been given to the user 
 * Automate the pipeline so that once a current image is taken it will automatically feed through the alignment, storage and smart contract process
-
 
 ## Acknowledgements
 
