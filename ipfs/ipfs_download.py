@@ -4,7 +4,6 @@ import base64
 
 # ======= request CID hash from user ============
 
-
 def request_cid():
 
     CID = input("Enter your CID: ")
@@ -26,8 +25,6 @@ def get_image(hash):
     image_64_decode = base64.b64decode(image_file)  
     image_result = open('returned_template_ground_stone_plan_view.jpeg', 'wb') # create a writable image and write the decoding result
     image_result.write(image_64_decode)
-
-
 
 # ========== Entry point to script ========
 
