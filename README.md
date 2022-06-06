@@ -16,12 +16,12 @@ This project is a proof-of-concept infield localisation pipeline using smart con
 https://user-images.githubusercontent.com/44243266/172064632-ac9f9f0a-d460-4c8c-9944-084043ed0105.mp4
 
 ## How to Install and Run the Project
-This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several decencies will be required as well as supporting tool chains. These should be widely available for your chosen operating system. 
+This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several dependencies will be required as well as supporting tool chains. These should be widely available for your chosen operating system. 
 
-With the guide below you should be able to get the pipeline working, experience smart contracts for yourself, as well as run your own blockchain (and see it operate in real time) even with limited experience. If you see any errors they are my own. Please feel free to make a pull request to improve this document. 
+With the below step by step guide, you should be able to get the pipeline working, experience smart contracts for yourself, as well as run your own blockchain (and see it operate in real time) even with limited experience. If you see any errors they are my own. Please feel free to make a pull request to improve this document. 
 
 ### 1. Install Node.js
-To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
+To install Node.js visit [nodejs.org](https://nodejs.org/en/) and follow the installation instructions for your operating system.
 
 ### 2. Install Truffle and Gananche
 After you have installed Node.js, type the following command into your terminal to install Truffle:
@@ -46,20 +46,20 @@ Node v16.15.1
 Web3.js v1.5.3
 ```
 
-Truffle comes with a client version of Ganache but you should ideally get the GUI. You should install this from the [trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) website. Then follow the instructions for your own operating system. 
+Truffle comes with a client version of Ganache but you should ideally get the GUI. This allows to you to clearly see what is happening on your bloockchain as well as details of each of the contracts you migrate. You should install the GUI from the [trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) website. Then follow the installation instructions for your own operating system. 
 
 ### 3. Start your own project
 
-To start your own project, change directory into a project folder (create a new empty folder on your desktop if you have not got one). The open a terminal in that folder and type:
+To start your own project, change directory into a project folder or create a new empty folder on your desktop if you have not got one. Then, open a terminal in that folder and type:
 
 ```
 truffle init
 ```
-This will create a new project which will will now have 3 x new folders and a .js config file. These will be called, ```contracts```, ```migrations```, ```test``` and ```truffle-config.js```. 
+This will create a new project which will now have three new folders and a .js config file. The three folders and one file are automatically generated and will be called, ```contracts```, ```migrations```, ```test``` and ```truffle-config.js```. 
 
-The contracts folder will contain the contracts, the migrations folder will contain the deployment files. The tests is a place write to test the logic of the contracts before they go into production.
+The contracts folder will contain the smart contracts, the migrations folder will contain the deployment files. The test folder is a place to test the logic of the contracts before they go into production.
 
-Before we start the next step is tho amend the truffle-config.js file. Here, we need to un-comment the part of the configuration file (truffle-config.js) where we define the network to be used. Make sure that the below line (around line 45) is un-commented:
+Before we start the next step, we need to amend the truffle-config.js file. Here, we need to un-comment the part of the configuration file where we define the network to be used. This will ensure we correctly interact with the Ganache interface. Make sure that the below line (around line 45) is un-commented:
 
 ```
 host: "127.0.0.1", // Localhost (default: none)
@@ -67,19 +67,19 @@ host: "127.0.0.1", // Localhost (default: none)
 
 ### 4. Compile the smart contract
 
-This is the exciting bit! The best place to begin is by cloning this repo and taking the files provided as the project you created in step 3 (assuming it was on a folder on your desktop) will require several of the files in this repo. 
+This is the exciting bit! The best place to begin is by cloning this repo' and taking the files provided as the project you created in step 3 (assuming it was on a folder on your desktop). 
 
-You can do this by either the GitHub desktop tool or by installing Git on your system and typing:
+You can do this by either the GitHub desktop tool or by installing Git on your system, navigating to your project Desktop (as an example) and typing:
 
 ```
 git clone https://github.com/garry-clawson/Blockchain-Crop-Assurance-and-Localisation.git
 ```
 
-You will then have all the files needed when copying and pasting across into your project folder. 
+This will clone the folder to your desired location. You will then have all the files needed when copying and pasting across into your project folder. Once you have this, do the following:
 
-First, take the ```ImageStore.sol``` and place into your ```contracts``` folder. 
+* First, take the ```ImageStore.sol``` and place into your ```contracts``` folder. 
 
-Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder. The '2' at the start of the file name indicates that this is the 2nd file to be compiled (this is how Truffle knows the ordering of compilation). 
+* Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder. The '2' at the start of the file name indicates that this is the 2nd file to be compiled (this is how Truffle knows the ordering of compilation). 
 
 The ```ImageStore.sol``` file is a Solidity program ([Solidity](https://docs.soliditylang.org/en/v0.8.14/) is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
 
