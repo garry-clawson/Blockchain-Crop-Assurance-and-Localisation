@@ -4,7 +4,7 @@ from web3 import Web3, HTTPProvider
 # Contract address - normally this would be via a QR code scan but here we hard code it - 0x78C5b42F655e91eaEc8f44873e6A25eaFDE17dD9
 addressValue = input("Enter your Ethereum ImageStore contract address: ")
 
-image_CID = input("Enter the CID of the image: ")
+image_CID = input("Enter the CID of the image: ") #this will be given to you in the IPFS stage
 
 # truffle development blockchain address
 blockchain_address = 'http://127.0.0.1:7545'
