@@ -4,7 +4,7 @@ from web3 import Web3, HTTPProvider
 # Contract address - normally this would be via a QR code scan but here we hard code it - 0x78C5b42F655e91eaEc8f44873e6A25eaFDE17dD9
 addressValue = input("Enter your Ethereum ImageStore contract address: ")
 
-list_item = input("Enter the position of the CID in the list: ")
+list_item = input("Enter the position of the CID in the list: ") #The list starts at 1
 list_item = int(list_item)
 
 # truffle development blockchain address
