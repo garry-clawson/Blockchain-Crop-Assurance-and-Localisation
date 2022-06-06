@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/44243266/172064632-ac9f9f0a-d460-4c8c-
 ## How to Install and Run the Project
 This installation guide is a quick start to get you onto the right path to build you own smart contracts. This will take you through each of the steps required to replicate the vision localisation pipeline. Web3 libraries and several decencies will be required as well as supporting tool chains. These should be widely available for your chosen operating system. 
 
-With the guide below you should be able to get the pipeline working, experience smart contracts for yourself as well as run your own blockchain (and see it operate in real time), even with limited experience. If you see any errors they are my own. Please feel free to make a pull request to improve this document. 
+With the guide below you should be able to get the pipeline working, experience smart contracts for yourself, as well as run your own blockchain (and see it operate in real time) even with limited experience. If you see any errors they are my own. Please feel free to make a pull request to improve this document. 
 
 ### 1. Install Node.js
 To install Node.js, visit [nodejs.org](https://nodejs.org/en/) and follow the instructions for your operating system.
@@ -191,6 +191,14 @@ python3 align_stone_image.py --template images/template_ground_stone_plan_view.j
 ```
 
 Here, we are taking a template image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a direct plan view adjacent to the planting site), and comparing it to a newly current taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
+
+To play around with this using any images the usage is below:
+
+```
+python3 align_stone_image.py --template path/to/your/template/image --image path/to/your/current/image
+```
+
+Several more 'template' and 'current' images are available in the ```images > additional_images``` folder. 
 
 If the image is successfully able to be aligned then a ```Success...``` message will be shown. The newly current taken image is heavily rotated and banked to show the full alignment process. In practice, as the robot moves up and down a row it a newly taken image will be very similar (i.e. directly overhead) to the template image taken during seeding. 
 
