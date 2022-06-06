@@ -55,7 +55,7 @@ To start your own project, change directory into a project folder (create a new 
 ```
 truffle init
 ```
-This will create a new project which will will now have 3 x new folders and a js config file. These will be called, 'contracts', 'migrations', 'test' and 'truffle-config.js'. 
+This will create a new project which will will now have 3 x new folders and a .js config file. These will be called, ```contracts```, ```migrations```, ```test``` and ```truffle-config.js```. 
 
 The contracts folder will contain the contracts, the migrations folder will contain the deployment files. The tests is a place write to test the logic of the contracts before they go into production.
 
