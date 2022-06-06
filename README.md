@@ -79,17 +79,17 @@ This will clone the folder to your desired location. You will then have all the 
 
 * First, take the ```ImageStore.sol``` and place into your ```contracts``` folder. 
 
-* Second, take the ```2_deploy_contract.js``` and paste place into your ```migrations``` folder. The '2' at the start of the file name indicates that this is the 2nd file to be compiled (this is how Truffle knows the ordering of compilation). 
+* Second, take the ```2_deploy_contract.js``` and place it into your ```migrations``` folder. The '2' at the start of the file name indicates that this is the 2nd file to be compiled (this is how Truffle knows the ordering of compilation). 
 
 The ```ImageStore.sol``` file is a Solidity program ([Solidity](https://docs.soliditylang.org/en/v0.8.14/) is one programming language you can use to develop smart contracts on the Ethereum blockchain), and has three simple functions: ```addItem()```, ```getListItem()``` and ```getListSize```. 
 
-* ```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new images content identifiers (CID) to the contract. 
+* ```addItem()``` appends a string to a list that was created at the very top of the contract. This is used to keep on adding new content identifiers (CID) to the contract. The CID is a the returned value we get when we have uploaded our image to the [Interplanetary File System (IPFS)](https://ipfs.io). This is our decentralized storage that we call on to host our data. 
 
-* ```getListItem()``` returns the CID string of an indexed element in the List data structure. The CID is a the returned value we get when we have uploaded our image to the [Interplanetary File System (IPFS)](https://ipfs.io). This is our decentralized storage that we call on to host our data. 
+* ```getListItem()``` returns the CID string of an indexed element from the List data structure. 
 
 * ```getListSize``` returns the size of the List. This is mainly used to see how many CIDs we have stored in our contract. 
 
-To compile the project type the following in your terminal:
+Now we have each of the files in place. We are ready to compile the project. To compile the project type the following in your terminal:
 
 ```
 truffle compile
