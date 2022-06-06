@@ -128,7 +128,9 @@ The contract has now been deployed and is ready for us to use and interact with 
 
 ### 6. Interacting with the smart contract
 
-The smart contract can be interacted with via the terminal using Truffle commands, however we want to interact with the contract in a more automated way. This allows us to build broader pipelines and extend the project. To interact with smart contracts we will use ```web3``` tooling, specifically ```web3.py``` To install tyep the following into your terminal:
+The smart contract can be interacted with via the terminal using Truffle commands, however we want to interact with the contract in a more automated way. This allows us to build broader pipelines and extend the project. 
+
+To interact with smart contracts we will use ```web3``` tooling, specifically ```web3.py``` To install this on your system type the following into your terminal:
 
 ```
 pip install web3
@@ -136,19 +138,19 @@ pip install web3
 
 Note: You will need to have ```pip``` installed to use pip. For more information about web3 go to [web3.readthedocs](https://web3py.readthedocs.io/en/stable/quickstart.html). 
 
-Now that web3 is installed. We can copy then ```retrieve_image_cid.py``` and ```add_image_cid.py``` and paste these files into your ```project > smart_contract``` project folder. 
+Now that web3 is installed. We will move the ```retrieve_image_cid.py``` and ```add_image_cid.py``` files and place them into your ```project > smart_contract``` folder. 
 
-The ```retrieve_image_cid.py``` script asks for you smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract and and also a CID (such as ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9```) to append the list within the smart contract. This content identified (CID) and is specific to the image uploaded to IPFS. The act of appending this value to the blockchain is effectively notorising it.
+When the ```retrieve_image_cid.py``` script is run, it asks for your smart contract address (this can be found on the 'Contracts' tab next to the ImageStore contract) and and also a CID (whihc will look something like: ```QmWmXVKwg3PypTWNt9GSWvZHftDTEbJSyBkXH4rGaUFnh9```), to append the list within the smart contract. The content identified (CID) is specific to the image uploaded to IPFS. The act of appending this value to the blockchain is effectively notorising it. Remember, when a contact has been migrated to the blockchain it is not possible to amend it. So if there is a mistake, it is not possible to change it. 
 
 #### Add an image CID to the smart contract
 
-To run ```add_image_cid.py``` open a terminal and change directory to the project folder and type:
+To run ```add_image_cid.py``` open a terminal and make sure you are in the ```project > smart_contract```directory and type:
 
 ```
 python add_image_cid.py
 ```
 
-You will then be asked to enter you Ethereum ImageStore contract address and CID. Once entered this information you should get something simular to the below:
+You will then be asked to enter your Ethereum ImageStore contract address and CID. Once you have entered this information, you should get something similar to the below:
 
 ```
 Enter your Ethereum ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
@@ -157,19 +159,19 @@ CID added:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
 tx_hash: 0x9585e039227b6cb19e1492fe61a6dbe601a033e1cb2d36f014aa091526623392
 ```
 
-We can see from the above that there are 2 items in the list (the list starts at 1 and not 0), and the last list item is ```QmcBRb...``` and it has an associated transaction hash of ```0x9585e0...```. This last value is the associated transaction in the blockchain and can be seen when inspecting transactions on the Ganache GUI. 
+We can see from the above that there are 2 items in the list (the list starts at 1 and not 0), and the last item added is ```QmcBRb...``` and it has an associated transaction hash of ```0x9585e0...```. The transaction hash is the associated transaction in the blockchain and can be seen when inspecting transactions on the Ganache GUI. This is how we identify that an actual transaction has taken place. 
 
-If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this make sure you first add a CID to the smart contract first by following the pipeline process outlined in 'Putting it all together'. 
+If there is an error, it is most likely due to the contract having an empty list and the ListSize() function returning an exception. To avoid this make sure you first add a CID to the smart contract by following the pipeline process outlined in [How to Use the Project](#how-to-use-the-project). 
 
 #### Retrieve an image CID from the smart contract
 
-To run ```retrieve_image_cid.py``` open a terminal and change directory to the project folder and type:
+To run ```retrieve_image_cid.py``` open a terminal and make sure you are in the ```project > smart_contract```directory and type:
 
 ```
 python retrieve_image_cid.py
 ```
 
-You will then be asked to enter you Ethereum ImageStore contract address and the position of the CID in the list. Once entered this information you should get something similar to the below:
+You will then be asked to enter you Ethereum ImageStore contract address and the position of the CID in the list. Once you have entered this information, you should get something similar to the below:
 
 ```
 Enter your Ethereum ImageStore contract address: 0xA40e776DDAB373960dA5F6FC170743A9DAe51204
@@ -177,36 +179,38 @@ List size:  2
 CID:  QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62
 ```
 
-For this proof-of-concept no optimization has been completed. We are currently using a very simple list structure. In Solidity there is no simple way to search a list for as each step will incur a Gas cost. Other data structures will offer a better way to do this. 
+For this proof-of-concept no optimization has been completed. We are currently using a very simple list structure and have to remember what image referred to what CID. In Solidity there is no simple way to search a list for as each step will incur a Gas cost. Other data structures will offer a better way to do this, but for a proof-of-concept, it is fine! 
 
 
 ### 7. Aligning an image
 
-The image alignment process was inspired by the pyimagesearch [tutorial](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) for document image alignment and registration. The concept of aligning infield ground stones and using the same type of registration is compelling as low cost method to localize using only a vision system. 
+The image alignment process was inspired by the [pyimagesearch tutorial](https://pyimagesearch.com/2020/08/31/image-alignment-and-registration-with-opencv/) for document image alignment and registration. The concept of aligning infield ground stones and using the same type of registration is compelling as a low cost method to localize using only a simple vision system. 
 
-To align an image the ``` align_stone_image.py``` script is called. To call this script the following usage is required:
+To align an image the ``` align_stone_image.py``` script is called. To call this script, make sure you are in the same directory; then the following usage is required:
 
 ```
 python3 align_stone_image.py --template images/template_ground_stone_plan_view.jpeg --image images/template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg
 ```
 
-Here, we are taking a template image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a direct plan view adjacent to the planting site), and comparing it to a newly current taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
+So what is happening here? Here, we are taking a template image ```template_ground_stone_plan_view.jpeg``` (this is an image that has been taken by the robot when planting the seed and is a direct plan view adjacent to the planting site), and comparing it to a newly current taken image ```template_ground_stone_90_degree_rotated_45_degree_incline_side_view.jpeg```. 
 
-To play around with image alignment and registration using some more images the usage is below:
+To play around with image alignment and registration using some more images (this could be ground stones, a picture of your house or even book covers!) the general usage is below:
 
 ```
 python3 align_stone_image.py --template path/to/your/template/image --image path/to/your/current/image
 ```
 
-Several more 'template' and 'current' images are available in the ```images > additional_images``` folder. 
+Several more 'template' and 'current' ground stone images are available in the ```images > additional_images``` folder. 
 
-If the image is successfully able to be aligned then a ```Success...``` message will be shown. The newly current taken image is heavily rotated and banked to show the full alignment process. In practice, as the robot moves up and down a row it a newly taken image will be very similar (i.e. directly overhead) to the template image taken during seeding. 
+If the image is successfully able to be aligned then a ```Success...``` message will be shown. The current system will attempt to align any image so badly aligned images will look very bad. 
 
-Since this image (given as an example) is successful, we shall now upload it to IPFS. Further images to test alignment are available in the ```image_registration > images > additional_images``` folder. 
+In our example, the newly current taken ground stone image is heavily rotated and banked to show the full alignment process. In practice, as the robot moves up and down a row, the newly taken image will be very similar (i.e. directly overhead) to the template image taken during seeding. 
+
+Since this ground stone image (given as an example) is successful, we shall now upload it to IPFS. Further images to test alignment are available in the ```image_registration > images > additional_images``` folder. 
 
 ### 8. Upload image to IPFS
 
-The IPFS is accessible via an Infura API endpoint. When ever a user uploads text, files, images etc to IPFS a content identifier (CID) is returned. This looks similar to ```QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62```. This CID is what is uploaded to the smart contract described in Step 6. 
+The IPFS is accessible via an [Infura API](https://infura.io/product/ipfs) endpoint. Whenever a user uploads text, files, images etc to IPFS a content identifier (CID) is returned. This looks similar to ```QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62```. This CID is what is uploaded to the smart contract described in Step 6. 
 
 The ```ipfs_upload.py``` file is used to upload an image to IPFS. This takes an image (currently the ```template_ground_stone_plan_view.jpeg``` image used as an example, but this should be your successfully aligned image). To run the script using the example image open a terminal and change directory to the ```Project > ipfs``` folder. Then type:
 
@@ -214,19 +218,21 @@ The ```ipfs_upload.py``` file is used to upload an image to IPFS. This takes an 
 python3 ipfs_upload.py
 ```
 
-You should then get returned a CID as described above. 
+You should then get returned a CID as described above which will look similar to ```QmcBRbromnTm4dGRzrH2mFJCCwFBxBwhyegRoDGefdbC62```. 
 
 ### 9. Download an image from IPFS
 
-Downloading an image from IPFS is almost exactly the same as uploading, except that we are getting rather than adding. We use the same Infura API for access and take a content identifier (CID) as seen in step 8 to find the requested file. Since we are using an example image and will be writing this to the same folder as the ```template_ground_stone_plan_view.jpeg```, we will call this returned image ```returned_template_ground_stone_plan_view.jpeg```. Line 27 declares in the get_image() function states where this image should be written to. To download an image type the following into your terminal:
+Downloading an image from IPFS is almost exactly the same as uploading and image, except that we are 'getting' rather than 'adding'. We use the same Infura API for access and take a content identifier (CID) as seen in step 8 to find the requested file. Since we are using an example image and will be writing this to the same folder as the ```template_ground_stone_plan_view.jpeg```, we will call this returned image ```returned_template_ground_stone_plan_view.jpeg```. Line 27 declares the get_image() function and states where this image should be written to. Feel free to change this as you need. To download an image make sure you are in the ```project > ipfs``` folder and type the following into your terminal:
 
 ```
 python3 ipfs_download.py
 ```
 
+You will be asked for the CID of the required image so that the IPFS can find the required file. 
+
 ## How to Use the Project
 
-The installation section above describes how to get all the pieces of the pipeline. However, they are in a natural order for understanding the system and getting it working but not for operating the pipeline. This section will describe what part to run in what order to see a successful pipeline flow. This order is as follows:
+The [How to Install and Run the Project](#how-to-install-and-run-the-project) section above describes how to get all the pieces of the pipeline. However, they are in a natural order for understanding the system and getting it working but not for actually operating the pipeline. This section will describe what part to run and in what order to see a successful pipeline flow. This order is as follows:
 
 #### Prepare the pipeline
 1. Create your smart contract (steps 1-5)
@@ -235,7 +241,7 @@ The installation section above describes how to get all the pieces of the pipeli
 4. Repeat process 2-3 for all of the template images (i.e. for all images taken adjacent to a planted seed)
 
 #### Execute the pipeline
-5. Take a current image and save to images directory (this will be compared - aligned - to the template image)
+5. Take a current image and save to images directory *(Note: this will be compared - aligned - to the template image)*
 6. Recall the CID of the template image from the smart contract (step 6)
 7. Download the template image from IPFS using the recalled CID (step 9)
 8. Align the current image with the template image (step 7)
@@ -244,7 +250,7 @@ The installation section above describes how to get all the pieces of the pipeli
 
 ## Suggested Improvements
 
-Multiple improvements can be made to this pipeline in the underlying scripts and the smart contracts to make the system automated. A few ideas are below:
+Multiple improvements can be made to this pipeline in the underlying scripts and the smart contracts to make the system automated. A few (non exhaustive) ideas are below:
 
 * Improve the alignment process on ground stones - this is currently very simple and enhanced feature detection and segmentation would improve the accuracy (note, we are not looking to see if the images are the same, just if they can be aligned to a high accuracy)
 * Build in an accuracy model to provide a Yes/No result for image alignment
