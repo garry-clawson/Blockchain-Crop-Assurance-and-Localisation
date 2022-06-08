@@ -2,9 +2,9 @@
 
 This project is a proof-of-concept infield localisation pipeline using smart contracts deployed on the Ethereum network to notarise, store and retrieve images from the Interplanetary File System (IPFS) that have been successfully aligned to show a localisation match within an infield environment. Localisation is achieved by using images of ground stones taken adjacent to planted seeds to enable sub GNSS accuracy without expensive hardware requirements such as RTK-GNSS. This offers a novel way for low ground coverage crops such as onion, asparagus or turnips to be re-identified to provide potential for improved supply chain assurance.  
 
-# Who is this project intended for
+## Who is this project intended for?
 
-This project is intended to be used, extended and developed upon by students and early researchers who have an interest in smart agriculture, applications of robotics and autonomous systems in agri-tech, application of decentralized ledger technologies and those interested in applications of vision technologies. Minimal technical expertise is required and any person who has an interest in STEM would be able to follow these instructions to deploy and build on this project.
+This project is intended to be used, extended and developed upon by undergraduate students and early researchers who have an interest in smart agriculture, applications of robotics and autonomous systems in agri-tech, applications of decentralized ledger technologies and those interested in the potential of image technologies. Minimal technical expertise is required and any person who is undertaking an undergraduate course in STEM would be able to follow these instructions to deploy and build on this project.
 
 ## Table of Contents
 * [Demonstration Video](#demonstration)
